@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Logo from "../../../../assets/img/logo.png"
 
 const HeroSection = () => {
   return (
-    <div>HeroSection</div>
+    <section>
+      <div>
+        <img src={Logo} alt="" />
+      </div>
+    </section>
   )
 }
 
