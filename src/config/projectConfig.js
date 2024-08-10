@@ -31,4 +31,12 @@ export const ProjectConfig = [
         githublink: "",
         type: "Challenge"
     },
+    {
+        id:4,
+        personality:"ROBERT GARCIA",
+        description: "A Sydney based front-end developer passionate about building accessible and user friendly websites.",
+        dataset: "Hi, I AM",
+        contact: "Contact Me",
+        character: "."
+    }
 ]
