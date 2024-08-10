@@ -11,7 +11,7 @@ export const UserConfig = {
     email: "abimbolaobafisayo@gmail.com",
     bio: "A Sydney based front-end developer passionate about building accessible and user friendly websites.",
     // create an accesskey on web3forms https://web3forms.com/
-    accesskey: "65833fa4-e6eb-478d-88db-c1c5f6658b1f",
+    accesskey: "",
     resumeLink: "https://drive.google.com/file/d/1Q2CVdUm8WoQWr4mCBJjdi2DRrDJFs0Nk/view?usp=sharing",
     portraitimg: portraitimg,
     about: {
