@@ -9,7 +9,7 @@ export const UserConfig = {
     firstname: "Robert",
     lastname: "Garcia",
     email: "abimbolaobafisayo@gmail.com",
-    password: "obafisayo1147",
+    password: "",
     resumeLink: "https://drive.google.com/file/d/1Q2CVdUm8WoQWr4mCBJjdi2DRrDJFs0Nk/view?usp=sharing",
     portraitimg: portraitimg,
     about: {
