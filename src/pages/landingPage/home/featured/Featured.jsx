@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from './project/Project';
-import { ProjectConfig } from '../../../../config/projectConfig';
+import { UserConfig } from '../../../../config/userConfig';
 
 const Featured = () => {
   return (
@@ -16,7 +16,7 @@ const Featured = () => {
             </div>
           </div>
           <div className="flex flex-col gap-20">
-            {ProjectConfig.map((dets, index) => (
+            {UserConfig.projects.map((dets, index) => (
               <Project
                 key={index}
                 client={dets.client}

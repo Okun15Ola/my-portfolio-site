@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom"
 import DarkMode from './darkmode/DarkMode';
 import Hamburger from './hamburger/Hamburger';
 import { HOME, ABOUT } from '../../routes/RoutesConstant';
+import { UserConfig } from '../../config/userConfig';
 
 const HomeLinks = [
     {
@@ -60,7 +61,7 @@ const Navbar = () => {
             <div className="container py-6 flex justify-between items-center font-interbold">
                 <div className="flex justify-between items-center w-full mr-8">
                     <Link to={HOME} onClick={() => scrollToDiv('hero')} className="uppercase font-bold text-black dark:text-brandOffwhite font-bebas text-3xl">
-                        Robert Gracia
+                        {UserConfig.firstname} {UserConfig.lastname}
                     </Link>
                     <div>
                         <ul className={`sm:inline-flex sm:justify-center sm:items-center sm:gap-6

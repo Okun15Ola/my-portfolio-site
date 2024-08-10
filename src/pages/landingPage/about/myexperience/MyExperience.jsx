@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExpConfig } from '../../../../config/experienceConfig.js';
+import { UserConfig } from '../../../../config/userConfig.js';
 
 const MyExperience = () => {
   return (
@@ -10,7 +10,7 @@ const MyExperience = () => {
             <h1 className="uppercase font-bebas text-5xl md:text-7xl">My Experience</h1>
           </div>
           <div className="flex flex-col md:w-7/12 gap-7 md:gap-14 md:mt-24">
-            {ExpConfig.map((data) => (
+            {UserConfig.experience.map((data) => (
               <div className="flex flex-col gap-4" key={data.id}>
                 <div className="flex justify-between max-md:flex-col">
                   <h1 className="font-medium text-lg md:text-2xl">{data.title}</h1>

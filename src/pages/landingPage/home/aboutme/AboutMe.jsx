@@ -1,4 +1,5 @@
 import React from 'react'
+import { UserConfig } from '../../../../config/userConfig';
 
 const AboutMe = ({children}) => {
   return (
@@ -10,16 +11,8 @@ const AboutMe = ({children}) => {
           </div>
           <div className="flex flex-col md:w-7/12 gap-7 md:gap-14 md:mt-24">
             <div className="flex flex-col gap-6">
-              <h1 className="font-medium text-lg md:text-3xl">I am a front-end developer based in Sydney. Has 
-                Mechanical Engineering background. </h1>
-              <p className="dark:text-brandOffwhite md:text-lg">I am a front-end developer based in Sydney looking for 
-                exciting opportunities. Has Mechanical Engineering 
-                background. Likes to focus on accessibility when 
-                developing. Passionate and curious about solving 
-                problems. Currently, I’m exploring Reactjs, Webflow and a bit of 
-                Designing. While I am not programming, I enjoy playing football, 
-                photography and playing Valorant. Learning more to improve skill.
-              </p>
+              <h1 className="font-medium text-lg md:text-3xl">{UserConfig.about.title}</h1>
+              <p className="dark:text-brandOffwhite md:text-lg">{UserConfig.about.des}</p>
             </div>
             {children}
           </div>

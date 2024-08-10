@@ -6,10 +6,11 @@ import aboutimg1 from "../assets/static/img/aboutimage.png"
 import aboutimg2 from "../assets/static/img/coolimg.png"
 
 export const UserConfig = {
-    firstname: "Robert",
-    lastname: "Garcia",
+    firstname: "Obafisayo",
+    lastname: "Abimbola",
     email: "abimbolaobafisayo@gmail.com",
-    password: "",
+    // create an accesskey on web3forms https://web3forms.com/
+    accesskey: "65833fa4-e6eb-478d-88db-c1c5f6658b1f",
     resumeLink: "https://drive.google.com/file/d/1Q2CVdUm8WoQWr4mCBJjdi2DRrDJFs0Nk/view?usp=sharing",
     portraitimg: portraitimg,
     about: {
@@ -72,9 +73,9 @@ export const UserConfig = {
         },
     ],
     socials: {
-        linkedin: "",
-        github: "",
-        twitter: "",
-        instagram: ""
+        linkedin: "www.linkedin.com/in/obafisayo-abimbola-040689212",
+        github: "https://github.com/obafisayo",
+        twitter: "https://x.com/obafisayo_og",
+        instagram: "https://www.instagram.com/shirtless_coder/"
     }
 }
