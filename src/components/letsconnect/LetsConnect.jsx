@@ -1,8 +1,19 @@
 import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
+import { UserConfig } from '../../config/userConfig';
 
 const LetsConnect = () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      subject: event.target.subject.value,
+      message: event.target.message.value,
+    };
+    console.log(formData)
+  };
   return (
     <div className="md:container">
       <section id="contact" className="md:mt-10">
@@ -12,21 +23,29 @@ const LetsConnect = () => {
               <div className="flex flex-col gap-2">
                 <h1 className="uppercase font-bebas md:text-7xl text-5xl">Let's connect</h1>
                 <p className="md:text-lg dark:text-brandOffwhite">
-                  Say hello at <span className="border-b dark:border-primary border-secondary">robertgarcia@gmail.com</span> <br />
-                  For more info, here's my <span className="border-b dark:border-primary border-secondary">resume</span>
+                  Say hello at <a href={`mailto:${UserConfig.email}`} className="border-b dark:border-primary border-secondary">{UserConfig.email}</a> <br />
+                  For more info, here's my <a href={`${UserConfig.resumeLink}`} target="_blank" rel="noopener noreferrer" className="border-b dark:border-primary border-secondary">resume</a>
                 </p>
               </div>
               <div className="flex gap-6">
-                <FaLinkedin size={30} className={"dark:text-primary text-secondary"} />
-                <FaGithub size={30} className={"dark:text-primary text-secondary"} />
-                <FaXTwitter size={30} className={"dark:text-primary text-secondary"} />
-                <FaInstagram size={30} className={"dark:text-primary text-secondary"} />
+                <a href={UserConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin size={30} className={"dark:text-primary text-secondary"} />
+                </a>
+                <a href={UserConfig.socials.github} target="_blank" rel="noopener noreferrer">
+                  <FaGithub size={30} className={"dark:text-primary text-secondary"} />
+                </a>
+                <a href={UserConfig.socials.twitter} target="_blank" rel="noopener noreferrer">
+                  <FaXTwitter size={30} className={"dark:text-primary text-secondary"} />
+                </a>
+                <a href={UserConfig.socials.instagram} target="_blank" rel="noopener noreferrer">
+                  <FaInstagram size={30} className={"dark:text-primary text-secondary"} />
+                </a>
               </div>
             </div>
-            <p className="max-md:absolute max-md:bottom-0 max-md:mb-16 font-medium dark:text-brandOffwhite">&copy; 2024 Robert Garcia</p>
+            <p className="max-md:absolute max-md:bottom-0 max-md:mb-16 font-medium dark:text-brandOffwhite">&copy; 2024 {UserConfig.firstname} {UserConfig.lastname}</p>
           </div>
           <div className="md:w-1/2 max-md:mb-32 md:mt-10">
-            <form action="submit" method="post">
+            <form action="submit" method="post" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-6 mb-10">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className="font-medium dark:text-brandOffwhite">Name</label>
@@ -45,7 +64,9 @@ const LetsConnect = () => {
                   <textarea id="message" name="message" placeholder="..." className="min-h-40 md:text-lg py-3 px-4 dark:bg-black border-none rounded-lg"></textarea>
                 </div>
               </div>
-              <input type="button" value="submit" className="border py-5 px-10 rounded-full dark:text-black text-white dark:bg-primary bg-secondary font-bold uppercase cursor-pointer" />
+              <button type="submit" className="border py-5 px-10 rounded-full dark:text-black text-white dark:bg-primary bg-secondary font-bold uppercase cursor-pointer">
+                Submit
+              </button>
             </form>
           </div>
         </div>
