@@ -30,5 +30,6 @@ export const ProjectConfig = [
         liveDemo: "",
         githublink: "",
         type: "Challenge"
-    },
+    }
+  
 ]
