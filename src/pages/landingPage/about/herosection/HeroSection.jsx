@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import AboutMe from '../../home/aboutme/AboutMe';
 import PrimaryButton from '../../../../components/primarybutton/PrimaryButton';
 import { UserConfig } from '../../../../config/userConfig';
