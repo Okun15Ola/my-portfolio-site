@@ -1,4 +1,5 @@
 import React from 'react'
+import { UserConfig } from '../../../../config/userConfig';
 
 const MyCapabilities = () => {
   return (
@@ -9,13 +10,9 @@ const MyCapabilities = () => {
             <h1 className="uppercase font-bebas text-5xl md:text-7xl">My capabilities</h1>
           </div>
           <div className="flex flex-col md:w-7/12 gap-7 md:gap-14 md:mt-24">
-            <p className="dark:text-brandOffwhite md:text-lg">
-              I am always looking to add more skills. Morbi egestas 
-              neque eu blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at purus 
-              faucibus tristique ut et dolor.
-            </p>
+            <p className="dark:text-brandOffwhite md:text-lg">{UserConfig.capabilities.title}</p>
             <div className="flex flex-wrap gap-4">
-              {["html", "css", "javascript", "jquery", "accessibility", "figma", "tailwindcss"].map((text, index) => (
+              {UserConfig.capabilities.stack.map((text, index) => (
                 <div key={index} className="px-10 py-5 rounded-full border dark:border-brandGray border-black">
                   <h1 className="uppercase">{text}</h1>
                 </div>

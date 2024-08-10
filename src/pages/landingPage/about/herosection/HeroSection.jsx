@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col gap-24 md:gap-40">
       <AboutMe>
-        <PrimaryButton text={"DOWNLOAD RESUME"} />
+        <PrimaryButton text={"DOWNLOAD RESUME"} buttonlink={UserConfig.resumeLink} />
       </AboutMe>
       <div className="md:container">
         <div className="flex justify-center items-center w-full h-fit rounded-xl pt-8 md:pt-14 bg-brandGray dark:bg-brandOffwhite ">

@@ -57,7 +57,7 @@ const Navbar = () => {
     const links = location.pathname === ABOUT ? AboutLinks : HomeLinks;
 
     return (
-        <section className="sticky top-0 bg-white dark:bg-gray-950 shadow-md z-50">
+        <section className="sticky top-0 bg-white dark:bg-black shadow-md z-50">
             <div className="container py-6 flex justify-between items-center font-interbold">
                 <div className="flex justify-between items-center w-full mr-8">
                     <Link to={HOME} onClick={() => scrollToDiv('hero')} className="uppercase font-bold text-black dark:text-brandOffwhite font-bebas text-3xl">
