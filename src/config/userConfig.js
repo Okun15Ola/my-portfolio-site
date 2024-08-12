@@ -18,11 +18,11 @@ export const UserConfig = {
     portraitimg: portraitimg,
     about: {
         img2: aboutimg,
-        title: "I am a front-end developer based in Nigeria. Has background in Software Engineering.",
-        des: `I am a front-end developer based in Nigeria looking for exciting opportunities. Has Software Engineering background. 
-            Likes to focus on accessibility and responsiveness when developing. Passionate and curious about solving problems. Currently, 
-            I’m exploring Typescript, Webflow and a bit of Designing. While I am not programming, 
-            I enjoy watching anime, content creation and playing Violin. Learning more to improve skill.`
+        title: "I am a front-end developer based in Nigeria with a background in Software Engineering.",
+        des: `I am a front-end developer based in Nigeria looking for exciting opportunities. I have a Software Engineering background. 
+            I focus on accessibility and responsiveness when developing. I am passionate and curious about solving problems. Currently, 
+            I'm exploring Typescript, Webflow, and a bit of Designing. When I'm not programming, 
+            I enjoy watching anime, content creation, and playing the Violin. I'm always learning to improve my skills.`
     },
     capabilities: {
         title: "I am always looking to add more skills. Learning everyday to add to my skill set and be a better developer.",
