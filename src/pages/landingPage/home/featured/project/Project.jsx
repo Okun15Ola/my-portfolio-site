@@ -37,14 +37,14 @@ const Project = ({id, img, title, des, client, year, role, livedemo, githublink,
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <div className="flex border-b-2 border-secondary dark:border-primary uppercase items-center justify-center gap-1">
+                    {livedemo && <div className="flex border-b-2 border-secondary dark:border-primary uppercase items-center justify-center gap-1">
                         <a className="text-sm md:text-base text-secondary dark:text-primary font-medium" href={livedemo} target="_blank" rel="noreferrer">Live Demo</a>
                         <MdArrowOutward size={20} className={"dark:text-primary text-secondary"} />
-                    </div>
-                    <div className="flex border-b-2 border-secondary dark:border-primary uppercase items-center justify-center gap-1">
+                    </div>}
+                    {githublink && <div className="flex border-b-2 border-secondary dark:border-primary uppercase items-center justify-center gap-1">
                         <a className="text-sm md:text-base text-secondary dark:text-primary font-medium" href={githublink} target="_blank" rel="noreferrer">See On Github</a>
                         <FaGithub size={20} className={"dark:text-primary text-secondary"} />
-                    </div>
+                    </div>}
                 </div>
             </div>
         </div>

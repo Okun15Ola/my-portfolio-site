@@ -11,7 +11,7 @@ const HeroSection = () => {
       </AboutMe>
       <div className="md:container">
         <div className="flex justify-center items-center w-full h-fit rounded-xl pt-8 md:pt-14 bg-brandGray dark:bg-brandOffwhite ">
-          <img src={UserConfig.about.img2} alt="hero-img" />
+          <img src={UserConfig.about.img2} alt="hero-img-about" className="drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]" />
         </div>
       </div>
     </div>
