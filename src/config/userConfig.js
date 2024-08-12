@@ -126,7 +126,7 @@ export const UserConfig = {
         },
     ],
     socials: {
-        linkedin: "www.linkedin.com/in/obafisayo-abimbola-040689212",
+        linkedin: "https://www.linkedin.com/in/obafisayo-abimbola-040689212/",
         github: "https://github.com/obafisayo",
         twitter: "https://x.com/obafisayo_og",
         instagram: "https://www.instagram.com/shirtless_coder/"
