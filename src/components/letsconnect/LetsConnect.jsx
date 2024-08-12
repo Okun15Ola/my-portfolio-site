@@ -31,7 +31,7 @@ const LetsConnect = () => {
     if (res.success) {
       Swal.fire({
         title: "Thank You!",
-        text: "Message sent to Obafisayo",
+        text: `Message sent to ${UserConfig.firstname}`,
         icon: "success"
       });
     }
