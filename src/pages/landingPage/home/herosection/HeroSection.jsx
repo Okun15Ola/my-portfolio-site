@@ -36,7 +36,7 @@ const HeroSection = () => {
           </div>
           <div className='flex flex-row md:w-1/2'>
             <div className="flex justify-center items-center w-full h-fit rounded-xl pt-8 md:pt-14 bg-brandGray dark:bg-brandOffwhite">
-              <img src={UserConfig.portraitimg} alt="hero-img-home" className="drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]" />
+              <img src={UserConfig.mine} alt="hero-img-home" className="drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]" />
             </div>
           </div>
         </div>
