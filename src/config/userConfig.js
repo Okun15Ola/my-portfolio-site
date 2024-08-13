@@ -10,7 +10,7 @@ export const UserConfig = {
     firstname: "Okunola",
     lastname: "Olubanjo",
     email: "okunolaolubanjo@gmail.com",
-    bio: "Full stack software engineer (MERN) experienced in working with teams, proficient in building cutting edge solution web applications",
+    bio: "Full stack software engineer (MERN) experienced in working with teams, adept at developing cutting-edge web solutions.",
     // create an accesskey on web3forms https://web3forms.com/
     accesskey: "5430673d-f9e8-478b-bc3a-b27b342479a1",
     resumeLink: "https://docs.google.com/document/d/1ZeTyVQ-i3yaFY_gnVggoZy59QZ4bjFo_/edit?usp=drive_link&ouid=110800062833918661055&rtpof=true&sd=true",
