@@ -1,10 +1,8 @@
 
 import image2 from "../assets/static/Portfolio_images/2.png";
-// import image3 from "../assets/static/Portfolio_images/3.png";
-// import image4 from "../assets/static/Portfolio_images/4.png";
-// import image6 from "../assets/static/Portfolio_images/6.png";
 import mine2 from '../assets/img/mine2.jpg'
 import mine from '../assets/img/mine.jpg'
+import work2 from "../assets/static/Portfolio_images/work2 (2).jpg";
 
 export const UserConfig = {
     firstname: "Okunola",
@@ -65,6 +63,17 @@ export const UserConfig = {
             githublink: "https://okun15ola.github.io/e-commerce-site/",
             type: "Challenge"
         },
+        {
+            id: "schoolportal",
+            img: work2,
+            title: "Full Functional School Portal",
+            des: `Successfully developed a dynamic and user-friendly school portal system featuring student registration, course enrollment, grade tracking, and secure login authentication. Integrated admin and teacher dashboards for managing classes, uploading results, and monitoring student performance. Demonstrated advanced skills in full-stack web development using React.js, TypeScript, and Supabase for a structured database system, ensuring efficient data handling and security.`,
+            year: "2025",
+            role: "Front-end Developer",
+            liveDemo: "https://npk-topaz.vercel.app/",
+            githublink: "https://github.com/Okun15Ola/npk",
+            type: "Project"
+        },
         // {
         //     id: "piggyvest",
         //     img: image3,
@@ -103,7 +112,7 @@ export const UserConfig = {
         // },
     ],
     socials: {
-        linkedin: "https://www.linkedin.com/in/okunola-olubanjo-0ab9b9264",
+        linkedin: "www.linkedin.com/in/okunola-olubanjo-964541361",
         github: "https://github.com/Okun15Ola",
         twitter: "https://x.com/OkunolaOlu11042",
         instagram: "https://www.instagram.com/okunolaolubanjoolamide?igsh=Z3RlMGhtOWZ3ZzVi"
