@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { UserConfig } from "../../../config/userConfig";
 import { ABOUT, PROJECTS, SKILLS, CONTACT, HOME } from "../../../routes/RoutesConstant";
 
-/** Group stack items into Frontend / Backend / Database for display */
 function groupStack(stack) {
   const frontendKeys = ["react", "typescript", "javascript", "tailwind", "html", "css", "figma", "accessibility"];
   const backendKeys = ["node", "express", "dsa"];
@@ -19,11 +18,11 @@ function groupStack(stack) {
 }
 
 function formatTime() {
-  return new Date().toISOString().slice(11, 19).replace(/:/g, ":") + "_GMT";
+  return new Date().toISOString().slice(11, 19) + "_GMT";
 }
 
-export default function About() {
-  const { experience, capabilities, socials } = UserConfig;
+export default function Skills() {
+  const { capabilities, socials } = UserConfig;
   const grouped = groupStack(capabilities?.stack || []);
   const linkedinUrl = socials?.linkedin?.startsWith("http") ? socials.linkedin : `https://${socials?.linkedin || ""}`;
   const githubUrl = socials?.github || "#";
@@ -35,10 +34,9 @@ export default function About() {
       <div className="scanline" aria-hidden />
 
       <div className="min-h-screen p-4 md:p-8 flex flex-col gap-4 flicker relative z-10">
-        {/* Header: System Status */}
         <header className="w-full terminal-border-amber p-3 flex flex-wrap justify-between items-center bg-amber-primary/5">
           <div className="flex items-center gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest glow-text-amber">
+            <span className="text-xs font-bold uppercase tracking-widest glow-text-amber text-amber-primary">
               System Diagnostics: v0.42_STABLE
             </span>
             <span className="hidden md:inline text-[10px] text-amber-primary opacity-60">CPU_TEMP: 42°C</span>
@@ -54,7 +52,6 @@ export default function About() {
         </header>
 
         <main className="flex-grow grid grid-cols-12 gap-4">
-          {/* Sidebar: Memory_Map */}
           <aside className="col-span-12 md:col-span-3 flex flex-col gap-4">
             <div className="terminal-border-amber p-4 bg-amber-primary/5 h-full">
               <div className="mb-6">
@@ -70,13 +67,13 @@ export default function About() {
                     <Link to={ABOUT} className="hover:underline">0x001 - About</Link>
                     <span className="text-amber-primary">[OK]</span>
                   </li>
-                  <li className="flex justify-between text-black bg-amber-primary px-1">
-                    <span>0x002 - Experience</span>
-                    <span>[BUSY]</span>
-                  </li>
                   <li className="flex justify-between">
-                    <Link to={SKILLS} className="hover:underline">0x003 - Skills</Link>
+                    <Link to={ABOUT} className="hover:underline">0x002 - Experience</Link>
                     <span className="text-amber-primary">[OK]</span>
+                  </li>
+                  <li className="flex justify-between text-black bg-amber-primary px-1">
+                    <span>0x003 - Skills</span>
+                    <span>[BUSY]</span>
                   </li>
                   <li className="flex justify-between">
                     <Link to={PROJECTS} className="hover:underline">0x004 - Projects</Link>
@@ -91,48 +88,8 @@ export default function About() {
             </div>
           </aside>
 
-          {/* Main: Experience & Skills */}
           <div className="col-span-12 md:col-span-9 flex flex-col gap-4">
-            {/* Experience Section */}
-            <section id="experience" className="terminal-border-amber p-6 bg-amber-primary/5 glitch-box-amber">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-icons text-xl text-amber-primary" aria-hidden>folder_open</span>
-                <h2 className="text-lg font-bold tracking-tighter uppercase text-amber-primary">/var/log/experience</h2>
-              </div>
-              <div className="space-y-8">
-                {(experience || []).map((job) => (
-                  <div key={job.id} className="flex flex-col md:flex-row gap-6 items-start">
-                    <div className="p-4 border-2 border-amber-primary/40 rounded flex items-center justify-center bg-black flex-shrink-0">
-                      <div className="w-16 h-16 flex flex-col border-2 border-amber-primary">
-                        <div className="h-1/4 border-b-2 border-amber-primary flex justify-end px-1">
-                          <div className="w-4 h-full border-x-2 border-amber-primary bg-amber-primary/20" />
-                        </div>
-                        <div className="flex-grow flex items-center justify-center">
-                          <div className="w-10 h-8 border-2 border-amber-primary bg-amber-primary/10" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex flex-wrap justify-between items-start border-b border-amber-primary/20 pb-2 mb-2 gap-2">
-                        <div>
-                          <h3 className="text-xl font-bold uppercase glow-text-amber text-amber-primary">{job.title}</h3>
-                          <p className="text-xs text-amber-primary opacity-70">{job.company || "DEV_ACADEMY_INTL"}</p>
-                        </div>
-                        <span className="text-xs bg-amber-primary text-black px-2 py-0.5 font-bold uppercase">
-                          {job.startdate} - {job.enddate}
-                        </span>
-                      </div>
-                      <p className="text-sm leading-relaxed text-amber-primary/90 max-w-2xl whitespace-pre-line">
-                        {job.des}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Skills Section */}
-            <section id="skills" className="terminal-border-amber p-6 bg-amber-primary/5 flex-grow">
+            <section className="terminal-border-amber p-6 bg-amber-primary/5 flex-grow">
               <div className="flex items-center gap-3 mb-6">
                 <span className="material-icons text-xl text-amber-primary" aria-hidden>memory</span>
                 <h2 className="text-lg font-bold tracking-tighter uppercase text-amber-primary">/usr/bin/skills</h2>
@@ -176,7 +133,6 @@ export default function About() {
           </div>
         </main>
 
-        {/* Footer: Command Prompt */}
         <footer className="terminal-border-amber bg-black p-4 flex flex-col md:flex-row justify-between items-center gap-4 mt-auto">
           <div className="flex items-center gap-2 text-sm flex-wrap">
             <span className="text-amber-primary font-bold">ROOT@PORTFOLIO:~$</span>
@@ -184,42 +140,14 @@ export default function About() {
             <span className="w-2 h-4 bg-amber-primary cursor-blink ml-1 inline-block" aria-hidden />
           </div>
           <div className="flex gap-4 text-[10px] font-mono flex-wrap justify-center">
-            <a
-              className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary"
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RUN GITHUB.EXE
-            </a>
-            <a
-              className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary"
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RUN LINKEDIN.EXE
-            </a>
-            <a
-              className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary"
-              href={emailUrl}
-            >
-              RUN EMAIL.EXE
-            </a>
+            <a className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary" href={githubUrl} target="_blank" rel="noopener noreferrer">RUN GITHUB.EXE</a>
+            <a className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary" href={linkedinUrl} target="_blank" rel="noopener noreferrer">RUN LINKEDIN.EXE</a>
+            <a className="border border-amber-primary/40 px-3 py-1 hover:bg-amber-primary hover:text-black transition-all text-amber-primary" href={emailUrl}>RUN EMAIL.EXE</a>
           </div>
         </footer>
       </div>
 
-      {/* Noise overlay */}
-      <div
-        className="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-        }}
-        aria-hidden
-      />
-
-      {/* Corner elements */}
+      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} aria-hidden />
       <div className="fixed top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-amber-primary/40 pointer-events-none z-[60]" aria-hidden />
       <div className="fixed top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-amber-primary/40 pointer-events-none z-[60]" aria-hidden />
       <div className="fixed bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-amber-primary/40 pointer-events-none z-[60]" aria-hidden />
