@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UserConfig } from "../../../config/userConfig";
-import { ABOUT, PROJECTS, SKILLS, CONTACT, HOME } from "../../../routes/RoutesConstant";
+import { ABOUT, PROJECTS, CONTACT, HOME } from "../../../routes/RoutesConstant";
 
 function groupStack(stack) {
   const frontendKeys = ["react", "typescript", "javascript", "tailwind", "html", "css", "figma", "accessibility"];

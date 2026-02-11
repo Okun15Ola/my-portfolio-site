@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { UserConfig } from "../../../config/userConfig";
-import { ABOUT, PROJECTS, SKILLS, CONTACT, HOME } from "../../../routes/RoutesConstant";
+import { ABOUT, PROJECTS, SKILLS, HOME } from "../../../routes/RoutesConstant";
 import Swal from "sweetalert2";
 
 function formatTime() {
